@@ -1,8 +1,8 @@
 import MenuItem from "./MenuItem";
-import type { foodItemProps } from "./MenuItem";
+import type { FoodItem } from "./MenuItem";
 
 interface MenuListProps {
-	foodItems: foodItemProps[];
+	foodItems: FoodItem[];
 }
 
 function MenuList({ foodItems }: MenuListProps) {

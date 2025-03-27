@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export interface foodItemProps {
+export interface FoodItem {
 	id: number;
 	itemName: string;
 	description: string;
@@ -10,7 +10,7 @@ export interface foodItemProps {
 }
 
 interface MenuItemProps {
-	foodItem: foodItemProps;
+	foodItem: FoodItem;
 }
 
 function MenuItem({

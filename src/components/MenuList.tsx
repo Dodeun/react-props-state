@@ -1,19 +1,11 @@
 import MenuItem from "./MenuItem";
+import type { foodItemProps } from "./MenuItem";
 
-export interface foodItem {
-	id: number;
-	itemName: string;
-	description: string;
-	foodImage: string;
-	price: number;
-	isFavorite: boolean;
+interface MenuListProps {
+	foodItems: foodItemProps[];
 }
 
-interface foodItemsProps {
-	foodItems: foodItem[];
-}
-
-function MenuList({ foodItems }: foodItemsProps) {
+function MenuList({ foodItems }: MenuListProps) {
 	return (
 		<>
 			{/* render a MenuItem component for each element of the foodItems array */}

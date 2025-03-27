@@ -1,13 +1,21 @@
 import { useState } from "react";
-import type { foodItem } from "./MenuList";
 
-interface MenuItemProps {
-	foodItem: foodItem;
+export interface foodItemProps {
+	id: number;
+	itemName: string;
+	description: string;
+	foodImage: string;
+	price: number;
+	isFavorite: boolean;
 }
 
-function MenuItem({ foodItem }: MenuItemProps) {
-	console.log(foodItem);
-	const { itemName, description, foodImage, price, isFavorite } = foodItem;
+interface MenuItemProps {
+	foodItem: foodItemProps;
+}
+
+function MenuItem({
+	foodItem: { itemName, description, foodImage, price, isFavorite },
+}: MenuItemProps) {
 	//create a state isFavorite that has the inital value of isFavorite that comes from the props
 	const [isFavoriteState, setIsFavoriteState] = useState(isFavorite);
 
